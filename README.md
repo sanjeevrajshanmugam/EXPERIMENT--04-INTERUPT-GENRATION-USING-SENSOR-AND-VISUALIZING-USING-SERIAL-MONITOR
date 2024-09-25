@@ -1,8 +1,8 @@
-###  DATE: 
+###  DATE: 09-09-2024
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: SANJEEV RAJ.S
+###  ROLL NO : 212223220096
+###  DEPARTMENT: IT
 
 
 # EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR
@@ -118,11 +118,45 @@ The diagram below shows how the GPIO pins are connected to the 16 interrupt line
   
 
 ## STM 32 CUBE PROGRAM :
+~~~
+#include "main.h"
+#include"stdbool.h"
+#include"stdio.h"
 
+while (1)
+  {
+    /* USER CODE END WHILE */
 
+    /* USER CODE BEGIN 3 */
+  }
+  /* USER CODE END 3 */
+}
+PUTCHAR_PROTOTYPE
+{
+	HAL_UART_Transmit(&huart2,(uint8_t*)&ch,1,0xFFFF);
+	return ch;
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if((GPIO_Pin == GPIO_PIN_1))
+	{
+
+		printf("INTERRUPT GENERATED  ");
+				 		 HAL_Delay(1000);
+	}
+	else
+	{
+		printf("NO INTERRUPT GENERATED  ");
+						 		 HAL_Delay(1000);
+	}
+}
+~~~
 
 ## Output screen shots of serial port utility   :
- 
+![WhatsApp Image 2024-09-25 at 11 04 07_4797eb39](https://github.com/user-attachments/assets/af1f3f0c-4272-4379-b51b-6ec2709565f5)
+
+
  
  ## Circuit board :
  
